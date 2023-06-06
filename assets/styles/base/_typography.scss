@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Helvetica Now Display";
+  src:
+    local("Helvetica Now Display"),
+    url("/fonts/HelveticaNowDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Now Display";
+  src:
+    local("Helvetica Now Display"),
+    url("/fonts/HelveticaNowDisplay-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.6;
+  font-family: "Helvetica Now Display", sans-serif;
+  color: var(--color-text1);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+.h1 {
+  font-size: 2rem;
+  line-height: 1;
+  margin: 2rem 0 1rem;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem;
+  line-height: 1.125;
+  margin: 1.5rem 0 1rem;
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin: 1.5rem 0 1rem;
+  font-weight: 700;
+}
+
+h4,
+.h4 {
+  font-size: 1.1rem;
+  line-height: 1.25;
+  margin: 1.5rem 0 1rem;
+  font-weight: 700;
+}
+
+a {
+  color: var(--color-link);
+  transition: color 0.2s ease;
+  text-decoration: none;
+
+  &.external::after {
+    content: "↗";
+    margin-left: 0.3em;
+    font-size: 0.6em;
+    color: var(--color-text1);
+    position: relative;
+    top: -0.2em;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ul,
+ol {
+  &.no-bullets {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &:has(li input[type="checkbox"]) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    input[type="checkbox"] {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-exposed {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,39 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+
+display_url: https://pm-devshop.netlify.app/
+logo_url: /media/avatar.png
+media_folder: static/media
+public_folder: /media
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+aliases:
+  - &VISIBLE_IN_CMS {name: visibleInCMS, widget: hidden, default: true}
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: post
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+
+    # This is hack to remove index.md from the list. Add visibleInCMS: true to all content files except index pages.
+    filter: {field: visibleInCMS, value: true}
+    editor:
+      preview: false
+    fields: [
+      {name: title, widget: string},
+      {name: description, widget: text},
+      {name: image, widget: image},
+      {name: date, widget: datetime},
+      {name: body, widget: markdown},
+      *VISIBLE_IN_CMS,
+    ]

@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <main class="container grid">
+    <div class="col-12">
+      <h1>{{ .Title }}</h1>
+
+      <p>{{ .Description }}</p>
+
+      <p>{{ .Date.Format "2. 1. 2006" }}</p>
+
+      <img src="{{ .Params.image }}" alt="">
+
+      {{ .Content }}
+    </div>
+  </main>
+{{ end }}

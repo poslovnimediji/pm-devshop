@@ -1,0 +1,28 @@
+.header {
+  padding: 12px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    img {
+      height: 60px;
+      width: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}

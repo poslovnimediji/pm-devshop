@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <main class="container">
+    <h1>{{ .Title }}</h1>
+  
+    <div class="grid">
+      {{ range .Pages }}
+        <div class="col-4">
+          {{ partial "card" . }}
+        </div>
+      {{ end }}
+    </div>
+  </main>
+{{ end }}
+

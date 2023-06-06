@@ -1,0 +1,25 @@
+.company {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    height: 80px;
+    width: auto;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    p,
+    h4 {
+      margin: 0;
+    }
+  }
+
+  + .company {
+    margin-top: 40px;
+  }
+}
