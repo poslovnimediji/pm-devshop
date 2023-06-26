@@ -1,28 +1,8 @@
-@font-face {
-  font-family: "Helvetica Now Display";
-  src:
-    local("Helvetica Now Display"),
-    url("/fonts/HelveticaNowDisplay-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Now Display";
-  src:
-    local("Helvetica Now Display"),
-    url("/fonts/HelveticaNowDisplay-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 html,
 body {
+  font-family: 'Inter', sans-serif;
   font-size: clamp(16px, 1.6vw, 18px);
   line-height: 1.6;
-  font-family: "Helvetica Now Display", sans-serif;
   color: var(--color-text1);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -118,4 +98,7 @@ ol {
 .text-exposed {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+}
+img {
+  max-width: 100%;
 }
