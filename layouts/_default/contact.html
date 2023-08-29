@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div class="container">
+    <form name="contact" netlify>
+      <input type="email" name="email"> <br>
+      <input type="text" name="name"> <br>
+      <textarea name="message"></textarea> <br>
+      <button type="submit">Pošlji</button>
+    </form>
+  </div>
+
+  {{ $contact := resources.Get "/scripts/contact-form.js" | js.Build }}
+  <script defer src="{{ $contact.RelPermalink }}"></script>  
+{{ end }}
