@@ -1,0 +1,27 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+
+  input, textarea {
+    border-radius: 0.25rem;
+    border: 1px solid grey;
+    padding: 0.25rem;
+  }
+
+  button {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: none;
+    background: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-text1);
+      color: var(--color-surface1);
+    }
+  }
+}
